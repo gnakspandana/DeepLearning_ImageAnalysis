@@ -1,0 +1,18 @@
+Task 1: 
+Interpretation of initial run: The predicted output is not a good estimate of the real target values. The model should ideally get same identical result as the target output i.e. that the fourth output is 1 and the rest is 0. But here, all of them are around 0.29, which we think could be interpreted as a 29% chance of being 1, as the problem is binary. Either way, the fact that all four predicted outputs are similar in magnitude tells us the model is not a very good predictor.
+
+No the results differ between runs. This is because the weights and biases are randomized at the start, introducing a source of randomness that also affects the results. 
+
+The loss value gets lower as the number of iterations higher. With more iterations, the neural network gets more and more trained to the problem and performs it better. 
+
+Increasing the n_unit increases the number of neurons in the hidden layer which drastically increases the accuracy of the results. 
+
+Task 2:
+The AND operator has lower loss values. We think it is because it is impossible to draw a straight line in the 2D illustration of the logic (fig 3 in the lab instructions) that places (0,1) and (1,0) on one side of the line and (0,0) and (1,1) on the other side. 
+
+Increasing the number of neurons in the hidden layer drastically improves the results for the XOR operator. We believe increasing that would visually make it possible for the model to draw a line that is not straight in the 2D illustration, therefore making it possible to separate the points correctly. 
+
+Although, increasing the number of neurons too much makes the model inaccurate. We believe this has to do with overfitting. 
+
+Task 3: 
+The model using Tensorflow and n_unit=1 gives inaccurate results as all four predictions are around 0.5, which is close to the chance level. Using n_unit=10 gives a better result with a more successful separation with the middle two predictions around 0.6 (ideally 1) and the others around 0.4 (ideally 0). It is still not close to correct but it is better than the chance level of 0.5. 
